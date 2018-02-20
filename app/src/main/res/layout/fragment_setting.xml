@@ -1,0 +1,283 @@
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="jp.mydns.diams.pinpointlandingdrone.layout.SettingFragment">
+
+        <!-- TODO: Update blank fragment layout -->
+
+        <TextView
+            android:id="@+id/setting_thresholdA_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="閾値A"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/setting_thresholdB_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/setting_thresholdA2_textView"
+            android:layout_marginTop="11dp"
+            android:text="閾値B"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/setting_thresholdB1_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/setting_thresholdB1_editText"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/setting_thresholdB_textView"
+            android:gravity="center_vertical"
+            android:text="閾値1："
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/setting_thresholdB2_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/setting_thresholdB2_editText"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/setting_thresholdB1_textView"
+            android:gravity="center_vertical"
+            android:text="閾値2："
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/setting_parallel_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/setting_parallel_editText"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/setting_speed_textView"
+            android:gravity="center_vertical"
+            android:text="平行移動："
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/setting_updown_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/setting_updown_editText"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/setting_parallel_textView"
+            android:gravity="center_vertical"
+            android:text="上昇下降："
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/setting_updown_editText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/setting_parallel_editText"
+            android:layout_toEndOf="@+id/setting_updown_textView"
+            android:layout_toStartOf="@+id/setting_mpers2_textView"
+            android:ems="10"
+            android:gravity="right"
+            android:inputType="text"
+            android:text="0.5" />
+
+        <TextView
+            android:id="@+id/setting_mpers2_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/setting_updown_editText"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/setting_parallel_editText"
+            android:gravity="center_vertical"
+            android:text="［m/s］"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/setting_parallel_editText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/setting_speed_textView"
+            android:layout_toEndOf="@+id/setting_parallel_textView"
+            android:layout_toStartOf="@+id/setting_mpers1_textView"
+            android:ems="10"
+            android:gravity="right"
+            android:inputType="text"
+            android:text="0.7" />
+
+        <TextView
+            android:id="@+id/setting_mpers1_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/setting_parallel_editText"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/setting_parallel_editText"
+            android:gravity="center_vertical"
+            android:text="［m/s］"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/setting_thresholdB1_editText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/setting_thresholdB_textView"
+            android:layout_toEndOf="@+id/setting_thresholdB1_textView"
+            android:layout_toStartOf="@+id/setting_dbm3_textView"
+            android:ems="10"
+            android:gravity="right"
+            android:inputType="text"
+            android:text="-63" />
+
+        <EditText
+            android:id="@+id/setting_thresholdB2_editText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/setting_thresholdB1_textView"
+            android:layout_toEndOf="@+id/setting_thresholdB1_textView"
+            android:layout_toStartOf="@+id/setting_dbm4_textView"
+            android:ems="10"
+            android:gravity="right"
+            android:inputType="text"
+            android:text="-63" />
+
+        <TextView
+            android:id="@+id/setting_dbm3_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/setting_thresholdB1_editText"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/setting_thresholdB1_editText"
+            android:gravity="center_vertical"
+            android:text="［dBm］"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/setting_dbm4_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/setting_thresholdB2_editText"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/setting_thresholdB1_editText"
+            android:gravity="center_vertical"
+            android:text="［dBm］"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/setting_thresholdA1_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/setting_thresholdA1_editText"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/setting_thresholdA_textView"
+            android:gravity="center_vertical"
+            android:text="閾値1："
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/setting_thresholdA2_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/setting_threholdA2_editText"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/setting_thresholdA1_textView"
+            android:gravity="center_vertical"
+            android:text="閾値2："
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/setting_threholdA2_editText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/setting_thresholdA1_textView"
+            android:layout_toEndOf="@id/setting_thresholdA2_textView"
+            android:layout_toStartOf="@+id/setting_dbm2_textView"
+            android:ems="10"
+            android:gravity="right"
+            android:inputType="text"
+            android:text="-63" />
+
+        <TextView
+            android:id="@+id/setting_dbm2_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/setting_threholdA2_editText"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/setting_dbm1_textView"
+            android:gravity="center_vertical"
+            android:text="［dBm］"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/setting_dbm1_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/setting_thresholdA1_editText"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/setting_thresholdA1_editText"
+            android:gravity="center_vertical"
+            android:text="［dBm］"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/setting_thresholdA1_editText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/setting_thresholdA_textView"
+            android:layout_toEndOf="@id/setting_thresholdA1_textView"
+            android:layout_toStartOf="@+id/setting_dbm1_textView"
+            android:ems="10"
+            android:gravity="right"
+            android:inputType="text"
+            android:text="-63" />
+
+        <TextView
+            android:id="@+id/setting_speed_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/setting_thresholdB2_textView"
+            android:layout_marginTop="22dp"
+            android:text="速度"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/setting_beacon_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/setting_updown_textView"
+            android:layout_toStartOf="@+id/setting_updown_editText"
+            android:text="登録済みのビーコンを見る" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/setting_beacon_button">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/setting_save_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="変更を保存" />
+
+                <Button
+                    android:id="@+id/setting_default_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:background="@color/colorAccent"
+                    android:text="デフォルトに戻す" />
+            </TableRow>
+        </TableLayout>
+
+    </RelativeLayout>
+</android.support.v4.widget.NestedScrollView>

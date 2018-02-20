@@ -1,0 +1,196 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".layout.AircraftFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <Button
+        android:id="@+id/aircraft_takeOff_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="離陸" />
+
+    <Button
+        android:id="@+id/aircraft_stop_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/aircraft_takeOff_button"
+        android:text="停止" />
+
+    <TextView
+        android:id="@+id/aircraft_moveParam_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="移動パラメータ："
+        android:textSize="18sp"
+        android:layout_below="@+id/aircraft_takeOff_button"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/aircraft_xParam_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/aircraft_x_editText"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/aircraft_moveParam_textView"
+        android:gravity="center_vertical"
+        android:text="X："
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/aircraft_yParam_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/aircraft_y_editText"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/aircraft_xParam_textView"
+        android:gravity="center_vertical"
+        android:text="Y："
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/aircraft_zParam_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/aircraft_z_editText"
+        android:layout_below="@+id/aircraft_yParam_textView"
+        android:layout_toStartOf="@+id/aircraft_x_editText"
+        android:gravity="center_vertical"
+        android:text="Z："
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/aircraft_z_editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="right"
+        android:inputType="none"
+        android:text="0"
+        android:layout_below="@+id/aircraft_y_editText"
+        android:layout_toStartOf="@+id/aircraft_z_textView"
+        android:layout_toEndOf="@id/aircraft_zParam_textView"/>
+
+    <TextView
+        android:id="@+id/aircraft_z_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="［m］"
+        android:textSize="18sp"
+        android:layout_below="@+id/aircraft_y_textView"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@+id/aircraft_z_editText" />
+
+    <EditText
+        android:id="@+id/aircraft_y_editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="right"
+        android:inputType="none"
+        android:text="0"
+        android:layout_below="@+id/aircraft_xParam_textView"
+        android:layout_toStartOf="@id/aircraft_y_textView"
+        android:layout_toEndOf="@+id/aircraft_yParam_textView" />
+
+    <TextView
+        android:id="@+id/aircraft_y_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/aircraft_y_editText"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/aircraft_x_editText"
+        android:gravity="center_vertical"
+        android:text="［m］"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/aircraft_x_editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/aircraft_moveParam_textView"
+        android:layout_toEndOf="@+id/aircraft_xParam_textView"
+        android:layout_toStartOf="@+id/aircraft_x_textView"
+        android:ems="10"
+        android:gravity="right"
+        android:inputType="none"
+        android:text="0" />
+
+    <TextView
+        android:id="@+id/aircraft_x_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/aircraft_x_editText"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/aircraft_x_editText"
+        android:gravity="center_vertical"
+        android:text="［m］"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/aircraft_flight_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/aircraft_zParam_textView"
+        android:text="とぶ" />
+
+    <Button
+        android:id="@+id/aircraft_measurement_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/aircraft_timeParam_textView"
+        android:text="はかる" />
+
+    <TextView
+        android:id="@+id/aircraft_timeParam_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:gravity="center_vertical"
+        android:text="時間パラメータ："
+        android:textSize="18sp"
+        android:layout_alignBottom="@+id/aircraft_time_editText"
+        android:layout_below="@+id/aircraft_flight_button" />
+
+    <TextView
+        android:id="@+id/aircraft_time_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/aircraft_timeParam_textView"
+        android:layout_alignParentEnd="true"
+        android:gravity="center_vertical"
+        android:text="［ms］"
+        android:textSize="18sp"
+        android:layout_below="@+id/aircraft_flight_button" />
+
+    <EditText
+        android:id="@+id/aircraft_time_editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/aircraft_flight_button"
+        android:layout_toStartOf="@id/aircraft_time_textView"
+        android:layout_toEndOf="@+id/aircraft_timeParam_textView"
+        android:ems="10"
+        android:gravity="right"
+        android:inputType="textPersonName"
+        android:text="10000" />
+
+    <TextView
+        android:id="@+id/aircraft_connect_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/aircraft_zParam_textView"
+        android:text="TextView" />
+
+</RelativeLayout>
