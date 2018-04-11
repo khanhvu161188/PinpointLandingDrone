@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -136,6 +137,21 @@ public class AircraftFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
+        Log.d("Aircraft.onAttach", "onAttach");
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        Log.d("Aircraft.onStart", "onStart");
+
+        if (mFlightController != null) {
+            mFlightController.sendDataToOnboardSDKDevice("isConnected".getBytes(), new CommonCallbacks.CompletionCallback() {
+                @Override
+                public void onResult(DJIError djiError) {
+                }
+            });
+        }
     }
 
     @Override
